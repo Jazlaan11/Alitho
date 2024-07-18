@@ -214,6 +214,10 @@ p {
   font-size: xx-large;
 }
 
+.hero a{
+margin-top: 30px;
+
+}
 /*About*/
 
 .about {
@@ -326,19 +330,33 @@ p {
   color: var(--title-span-color);
 }
 
-.project {
-  background-color: #ffffff;
+.services .cards .card a{
+  align-self: center;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #2f62cf; /* Dark blue background */
+  padding: 10px 30px;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease-in-out; /* Smooth background color transition */
+}
+
+
+
+.proj {
+  background-color: var(--title-span-color);
   overflow: hidden;
   border-radius: 10px; /* Rounded corners for the card */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transitions */
-
+  width:500px;
+  height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.project:hover {
+.proj:hover {
   transform: translateY(-5px); /* Lift the card slightly on hover */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
 }
@@ -356,32 +374,34 @@ p {
 }
 
 .project-content {
-  padding: 20px;
+  padding: 25px;
 }
 
 .project h3 {
-  color: #333333;
+  color: #ffffff;
   margin-top: 0;
 }
 
 .project p {
-  color: #666666;
+  color: #ffffff;
   line-height: 1.5;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
-.project a {
+.proj a {
   align-self: center;
   text-decoration: none;
   color: #ffffff;
-  background-color: #1a4e7e; /* Dark blue background */
-  padding: 10px 20px;
+  background-color: #2f62cf; /* Dark blue background */
+  padding: 10px 30px;
   border-radius: 5px;
+  margin-bottom: 20px;
   transition: background-color 0.3s ease-in-out; /* Smooth background color transition */
 }
 
-.project a:hover {
-  background-color: #0f3452; /* Darken background on hover */
+.proj a:hover {
+
+  background-color: #008cff; /* Darken background on hover */
 }
 
 .cards {
@@ -726,15 +746,9 @@ textarea {
   .contact .container {
     width: 100%;
   }
+  .proj {
+    width: calc(50% - 20px); /* Two cards per row on smaller screens */
 }
-@media screen and (max-width: 768px) {
-  .project {
-      width: calc(50% - 20px); /* Two cards per row on smaller screens */
-  }
 }
 
-@media screen and (max-width: 480px) {
-  .project {
-      width: 100%; /* Full width for cards on smaller screens */
-  }
-}
+
